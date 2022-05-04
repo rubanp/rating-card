@@ -1,10 +1,13 @@
-import minireset from "./minireset";
-class CustomElem extends HTMLElement {
+import minireset from './minireset';
+
+class ThankYouCard extends HTMLElement {
   constructor() {
     super();
+    this.attachShadow({ mode: 'open' });
   }
+
   connectedCallback() {
-    const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.shadowRoot as ShadowRoot;
     shadow.innerHTML = `
         <style id='css-main'>
         </style>
@@ -14,4 +17,4 @@ class CustomElem extends HTMLElement {
     shadow.prepend(minireset);
   }
 }
-export default CustomElem;
+export default ThankYouCard;
