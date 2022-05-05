@@ -1,22 +1,53 @@
-#container {
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgba(50, 50, 50, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 400px;
+  height: 50%;
+  margin: 2em;
+}
+
+/* Rating Card */
+/* =========== */
+#rating-card {
   background: radial-gradient(
     circle,
     rgba(35, 42, 52, 1) 0%,
     rgba(24, 30, 39, 1) 100%
   );
-  width: 100%;
+  width: 400px;
   padding: 2.5em;
   border-radius: 30px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
-@media only screen and (max-width: 400px) {
-  #container {
+@media only screen and (max-width: 500px) {
+  #rating-card {
     padding: 1.5em;
   }
 }
 
-#img-container {
+#rating-card #img-container {
   left: 0;
   display: flex;
   justify-content: center;
@@ -29,21 +60,21 @@
   aspect-ratio: 1/1;
 }
 
-h1 {
+#rating-card h1 {
   font-family: "Overpass";
   font-weight: 700;
   color: var(--white);
   margin-bottom: 0.5em;
 }
 
-p {
+#rating-card p {
   font-family: "Overpass";
   font-weight: 400;
   color: var(--light-grey);
   margin-bottom: 1.25em;
 }
 
-#ratings {
+#rating-card #ratings {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -51,11 +82,11 @@ p {
   margin-bottom: 1.25em;
 }
 
-input[type="radio"] {
+#rating-card input[type="radio"] {
   display: none;
 }
 
-label {
+#rating-card label {
   font-family: "Overpass";
   font-weight: 400;
   border-radius: 50%;
@@ -70,13 +101,13 @@ label {
   margin: 0 0.25em;
 }
 
-label:hover {
+#rating-card label:hover {
   background-color: var(--orange);
   color: var(--white);
   cursor: pointer;
 }
 
-input[type="submit"] {
+#rating-card input[type="submit"] {
   font-family: "Overpass";
   font-weight: 400;
   width: 100%;
@@ -92,13 +123,13 @@ input[type="submit"] {
   font-size: 1.25rem;
 }
 
-input[type="submit"]:hover {
+#rating-card input[type="submit"]:hover {
   background-color: var(--white);
   color: var(--orange);
   cursor: pointer;
 }
 
-.selected {
+#rating-card .selected {
   background-color: var(--medium-grey);
   color: var(--white);
 }
