@@ -172,4 +172,10 @@ p {
   #thank-you-card {
     justify-content: space-around;
   }
+  #thank-you-card p {
+    font-size: 14px;
+  }
+  #thank-you-card h1 {
+    font-size: 1.75rem;
+  }
 }
