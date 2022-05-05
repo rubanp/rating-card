@@ -20,61 +20,103 @@
       src="./app.ts"
       type="module"
     ></script>
-    <title>Project Template</title>
+    <title>Rating Card Component</title>
   </head>
 
   <body>
-    <main id="rating-card">
-      <section id="img-container">
-        <img
-          src="../static/star.svg"
-          alt="Star"
-        />
-      </section>
-      <h1>How did we do?</h1>
-      <p>
-        Please let us know how we did with your support request. All feedback is
-        appreciated to help us improve our offering!
-      </p>
-      <form action="">
-        <section id="ratings">
-          <label for="one-star">1</label>
-          <input
-            type="radio"
-            id="one-start"
-            name="rating"
-          />
-          <label for="two-star">2</label>
-          <input
-            type="radio"
-            id="two-start"
-            name="rating"
-          />
-          <label for="three-star">3</label>
-          <input
-            type="radio"
-            id="three-start"
-            name="rating"
-          />
-          <label for="four-star">4</label>
-          <input
-            type="radio"
-            id="four-start"
-            name="rating"
-          />
-          <label for="five-star">5</label>
-          <input
-            type="radio"
-            id="five-start"
-            name="rating"
+    <main>
+      <section
+        class="container"
+        id="rating-card"
+      >
+        <section id="img-container">
+          <img
+            src="../static/star.svg"
+            alt="Star"
           />
         </section>
-        <input
-          type="submit"
-          value="submit"
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form action="/">
+          <section id="ratings">
+            <label
+              for="oneStar"
+              class="rating-label rating-label-hover"
+              >1</label
+            >
+            <input
+              type="radio"
+              id="oneStar"
+              name="rating"
+            />
+            <label
+              for="twoStar"
+              class="rating-label rating-label-hover"
+              >2</label
+            >
+            <input
+              type="radio"
+              id="twoStar"
+              name="rating"
+            />
+            <label
+              for="threeStar"
+              class="rating-label rating-label-hover"
+              >3</label
+            >
+            <input
+              type="radio"
+              id="threeStar"
+              name="rating"
+            />
+            <label
+              for="fourStar"
+              class="rating-label rating-label-hover"
+              >4</label
+            >
+            <input
+              type="radio"
+              id="fourStar"
+              name="rating"
+            />
+            <label
+              for="fiveStar"
+              class="rating-label rating-label-hover"
+              >5</label
+            >
+            <input
+              type="radio"
+              id="fiveStar"
+              name="rating"
+            />
+          </section>
+          <input
+            type="submit"
+            value="submit"
+            disabled="true"
+          />
+        </form>
+      </section>
+      <section
+        id="thank-you-card"
+        class="container"
+      >
+        <img
+          src="./static/thank-you.svg"
+          alt="Icon of a form being submitted"
         />
-      </form>
+        <div id="received-rating"></div>
+        <div class="description">
+          <h1>Thank You!</h1>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </section>
     </main>
-    <section id="thank-you-card"></section>
   </body>
 </html>

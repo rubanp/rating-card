@@ -29,20 +29,21 @@ main {
 
 /* Rating Card */
 /* =========== */
-#rating-card {
+.container {
   background: radial-gradient(
     circle,
     rgba(35, 42, 52, 1) 0%,
     rgba(24, 30, 39, 1) 100%
   );
   width: 400px;
+  height: 410px;
   padding: 2.5em;
   border-radius: 30px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (max-width: 500px) {
-  #rating-card {
+  .container {
     padding: 1.5em;
   }
 }
@@ -60,21 +61,21 @@ main {
   aspect-ratio: 1/1;
 }
 
-#rating-card h1 {
+h1 {
   font-family: "Overpass";
   font-weight: 700;
   color: var(--white);
   margin-bottom: 0.5em;
 }
 
-#rating-card p {
+p {
   font-family: "Overpass";
   font-weight: 400;
   color: var(--light-grey);
-  margin-bottom: 1.25em;
 }
 
 #rating-card #ratings {
+  margin-top: 1.25em;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -86,7 +87,7 @@ main {
   display: none;
 }
 
-#rating-card label {
+.rating-label {
   font-family: "Overpass";
   font-weight: 400;
   border-radius: 50%;
@@ -101,7 +102,7 @@ main {
   margin: 0 0.25em;
 }
 
-#rating-card label:hover {
+.rating-label-hover:hover {
   background-color: var(--orange);
   color: var(--white);
   cursor: pointer;
@@ -123,13 +124,46 @@ main {
   font-size: 1.25rem;
 }
 
+#rating-card input[type="submit"]:disabled {
+  background-color: var(--medium-grey);
+}
+
+#rating-card input[type="submit"]:disabled:hover {
+  background-color: var(--medium-grey);
+  color: var(--white);
+  cursor: auto;
+}
+
 #rating-card input[type="submit"]:hover {
   background-color: var(--white);
   color: var(--orange);
   cursor: pointer;
 }
 
-#rating-card .selected {
+.selected {
   background-color: var(--medium-grey);
   color: var(--white);
+}
+
+/* Thank You Card */
+/* ============== */
+
+#thank-you-card {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#thank-you-card h1 {
+  vertical-align: bottom;
+}
+
+#received-rating {
+  background-color: var(--dark-blue);
+  color: var(--orange);
+  border-radius: 30px;
+  padding: 0.25em 1em;
+  font-family: "Overpass";
 }
